@@ -1,0 +1,3 @@
+- created github account today
+- covered Git and Github overview
+- practiced a few basic git commands like clone, checkout, fetch, branch etc
