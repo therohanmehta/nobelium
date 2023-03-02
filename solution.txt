@@ -1,0 +1,4 @@
+Q. What is the difference between git stash apply and git stash pop?
+Ans. Git stash command is used to undo the changes that we did on our code and save the undoed code to local machine
+                          when we use [git stash apply] it will copy the undo chqages from the local machine and store to the desired file we want and we can also use that copied text to more than once
+			  when we use [git stast pop] it will copy the undo text that is stored in the machine and store to the file where we want to copy but after that it will remove the undo text from the local machine
