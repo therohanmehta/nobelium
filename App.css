@@ -1,0 +1,29 @@
+#firstCard, #secondCard{
+  
+  background-color: #bd62e0;
+  width: 323px;
+  height: 369px;
+  padding-left: 18px;
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+
+
+img{
+height:100px;
+border-radius: 100%;
+
+border: 2px solid white;
+margin: 15px 30px;
+}
+body{
+  background-color: #e792e4;
+  color: white;
+  font-family: cursive;
+
+}
+
+h5 ,h1, p{
+  margin-top: -9px;
+  margin-left: 21px;
+}
