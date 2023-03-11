@@ -1,43 +1,38 @@
+import "./App.css";
+import { ValueIncreseDecrease } from "./valueIncreaseDecrease";
+import { NameChanger } from "./nameChanger";
+import { useState } from "react";
 
-import './App.css';
-import {User  } from "./card";
+export default function App() {
+  const [list, setList] = useState([]);
+  const [text, setText] = useState("");
 
-function App() {
+  function storeItems(event) {
+    setText(event.target.value);
+  }
+  function addToTheList() {
+    setList([...list, text]);
+  }
 
+  return (
+    <>
+      <h1>ToDo List Maker</h1>
+      <input onChange={storeItems} />
+      <br />
+      <button onClick={addToTheList}>Click to add</button>
+      <ol>
+        {list.map((ele) => (
+          <li>{ele}</li>
+        ))}
+      </ol>
+      <hr />
 
-        const User1 = {
-            Name: "Amit",
-            Designation: "Graphic Designer",
-            description:
-              "Highly creative and multitalented Graphic Designer with extensive experience in multimedia, marketing, and print design.",
-            img: "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg",
-          };
-        
-          const User2 = {
-            name: "Ruhi",
-            description:
-              "perform a variety of music for recordings and live audiences. They audition for positions in choruses, orchestras, bands, plays, 				and other types of music groups.",
-            designation: "Singer",
-            img: "https://images.pexels.com/photos/3775131/pexels-photo-3775131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-          };
-    
- 
-    return(
-<>
-<div id="firstCard">
+      <h1>Click On the Button to increase or Decrease the Value</h1>
+      <ValueIncreseDecrease />
 
-<User name={User1.Name} img={User1.img} Designation={User1.Designation} description={User1.description}/>
+      <hr />
 
-</div>
-<br />
-<div id="secondCard">
-    
-
-<User name={User2.name} img={User2.img} Designation={User2.designation} description={User2.description}/>
-</div>
-</>
-
-)
+      <NameChanger />
+    </>
+  );
 }
-
-export default App;
