@@ -1,43 +1,79 @@
-
-import './App.css';
-import {User  } from "./card";
-
+import React, { useState } from 'react';
+import "./App.css"
 function App() {
+  const [tasks, setTasks] = useState([]);
+  const [newTask, setNewTask] = useState('');
+  const [count, setCount] = useState(0)
 
+  const countTask = ()=>{
+    setCount(count+1)
+  }
 
-        const User1 = {
-            Name: "Amit",
-            Designation: "Graphic Designer",
-            description:
-              "Highly creative and multitalented Graphic Designer with extensive experience in multimedia, marketing, and print design.",
-            img: "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg",
-          };
-        
-          const User2 = {
-            name: "Ruhi",
-            description:
-              "perform a variety of music for recordings and live audiences. They audition for positions in choruses, orchestras, bands, plays, 				and other types of music groups.",
-            designation: "Singer",
-            img: "https://images.pexels.com/photos/3775131/pexels-photo-3775131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-          };
-    
- 
-    return(
-<>
-<div id="firstCard">
+  const decreaseTask = ()=>{
+    if(count>0){
+        setCount(count-1)
+    }
+  }
 
-<User name={User1.Name} img={User1.img} Designation={User1.Designation} description={User1.description}/>
+  const decreaseTask2 = (index)=>{
+    const newTasks = [...tasks];
+    newTasks[index].completed ? setCount(count+1):setCount(count-1)
+  }
 
-</div>
-<br />
-<div id="secondCard">
-    
+  const handleBoth1 = (index,task)=>{
+    decreaseTask2(index)
+    handleComplete(index)
+  }
 
-<User name={User2.name} img={User2.img} Designation={User2.designation} description={User2.description}/>
-</div>
-</>
+  const handleBoth2 = (index)=>{
+    decreaseTask();
+    handleDelete(index)
+  }
 
-)
+  const handleSubmit = e => {
+    e.preventDefault();
+    setTasks([...tasks, { text: newTask, completed: false }]);
+    setNewTask('');
+  };
+
+  const handleComplete = (index) => {
+    const newTasks = [...tasks];
+    newTasks[index].completed = !newTasks[index].completed;
+    setTasks(newTasks);
+  };
+
+  const handleDelete = (index) => {
+    const newTasks = [...tasks];
+    newTasks.splice(index, 1);
+    setTasks(newTasks);
+  };
+
+  return (
+    <>
+      <h1 style={{paddingTop:10, position: 'sticky', top:0, width:'100%', textAlign: 'center'}}>No. of pending Task ({count})</h1>
+        {tasks.map((task, index) => (
+          <li className='listItem'
+            key={index}
+            style={{ textDecoration: task.completed ? 'line-through' : 'none', listStyleType :'none'}}
+          >
+            <div style={{fontSize:20, overflowWrap: 'break-word', inlineSize: 176}}>{task.text}</div>
+            <div>
+                <button onClick={() => handleBoth1(index,task)}  className='btnDiv'>Complete</button>
+            <button onClick={() => handleBoth2(index)} className='btnDiv'>Delete</button>
+            </div>
+          </li>
+        ))}
+     <form onSubmit={handleSubmit} style={{bottom:0, width:'100%', textAlign: 'center'}}>
+        <input
+          type="text"
+          placeholder="Enter Task"
+          value={newTask}
+          onChange={e => setNewTask(e.target.value)}
+        />
+        <button style={{margin : 10, padding:10, borderRadius: 5, color: 'black'}} type="submit" onClick={countTask}>Add to todo list</button>
+      </form>
+    </>
+  );
 }
 
 export default App;
