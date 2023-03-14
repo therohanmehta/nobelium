@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  border: 2px solid black;
+  width: fit-content;
+  margin: auto;
+ padding: 20px;
+ border-radius: 7px;
 }
 
 .App-logo {
@@ -7,11 +12,24 @@
   pointer-events: none;
 }
 
+.AddTask{
+  
+margin: 4px;
+padding: 2px;
+background-color: burlywood;
+border-radius: 4px;
+animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 
 .App-header {
   background-color: #282c34;
