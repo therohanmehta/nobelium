@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+body{
+  background-color: black;
+  color: aliceblue;
+
+}
+.webIcon{
+  height: 45px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navIcons{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+   
+    width:1080px;
+     ;
+}
+.navIcons li{
+  margin-right: 10%;
+  list-style-type: none;
+}
+.loginBtn{
+  margin-right: 36px;
+  height: 40px;
   color: white;
+  background-color: transparent;
+  background-color: transparent;
+  width: 51px;
+}
+.signBtn{
+  height: 40px;
+  width: 100px;
+  border-radius: 20px;
+  border: 1px solid yellow;
+  background-color: transparent;
+  color: white;
+
+}
+img{
+  height: 100px;
+}
+.hamNavIcon{
+  border: 2px solid red;
+  /* display: none; */
 }
 
-.App-link {
-  color: #61dafb;
+
+.hamburgerIcon{
+  /* display: none; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (max-width:600px){
+.navIcons{
+  display: none;
 }
+.loginBtn ,.signBtn{
+  display: none;
+}
+
+.mainNavbar{
+  border: 2px solid green;
+  display:flex;
+  justify-content:space-between
+}
+.hamburgerIcon{
+  background-color: red;
+}
+}
+button{
+  width: 20px;
+  margin-right: 40px;
+}
+
+
+
+
+
+
+
+
+
+
