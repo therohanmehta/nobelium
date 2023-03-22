@@ -1,80 +1,19 @@
-body{
-  background-color: black;
-  color: aliceblue;
+.board-row{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.square{
+    border: 1px solid;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.board-container{
+    margin-top: 10vh;
+margin-left: 35vw;
+margin-right: 35vw;
 
 }
-.webIcon{
-  height: 45px;
-}
-
-.navIcons{
-  display: flex;
-   
-    width:1080px;
-     ;
-}
-.navIcons li{
-  margin-right: 10%;
-  list-style-type: none;
-}
-.loginBtn{
-  margin-right: 36px;
-  height: 40px;
-  color: white;
-  background-color: transparent;
-  background-color: transparent;
-  width: 51px;
-}
-.signBtn{
-  height: 40px;
-  width: 100px;
-  border-radius: 20px;
-  border: 1px solid yellow;
-  background-color: transparent;
-  color: white;
-
-}
-img{
-  height: 100px;
-}
-.hamNavIcon{
-  border: 2px solid red;
-  /* display: none; */
-}
-
-
-.hamburgerIcon{
-  /* display: none; */
-}
-
-@media screen and (max-width:600px){
-.navIcons{
-  display: none;
-}
-.loginBtn ,.signBtn{
-  display: none;
-}
-
-.mainNavbar{
-  border: 2px solid green;
-  display:flex;
-  justify-content:space-between
-}
-.hamburgerIcon{
-  background-color: red;
-}
-}
-button{
-  width: 20px;
-  margin-right: 40px;
-}
-
-
-
-
-
-
-
-
-
-
