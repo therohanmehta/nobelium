@@ -1,0 +1,59 @@
+
+.mainImg{
+    /* border: 2px solid red; */
+    height: 200px;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+.rohan{
+    /* border: 2px solid red; */
+    display: flex;
+    margin: 0px 80px;
+}
+.aboutHead{
+    /* border: 2px solid red; */
+    margin-left: 10vw;
+}
+.content{
+    /* border: 2px solid red; */
+    /* display: flex; */
+position: relative;
+height: 12vh;
+top: 10vh;
+right: 10vw;
+}
+.name{
+    width: 26vw;
+    position: relative;
+    left: 2rem;
+}
+/* .ageLocation{
+    display: flex;
+    margin: 0px;
+    flex-direction: column;
+    border: 2px solid pink;
+} */
+
+.cards{
+    /* border: 2px solid green; */
+    display: flex;
+    gap: 10vh;
+    margin-left: 15vh;
+
+}
+.cards1{
+    background-color: #8a2be2;
+    width: 20vw;
+    padding-left: 20px;
+    opacity: 0.7;
+    border-radius: 10px;
+    font-weight: bolder;
+    color: black;
+}
+.cards2{
+    composes : cards1
+}
+    
+.cards3{
+    composes : cards1
+}

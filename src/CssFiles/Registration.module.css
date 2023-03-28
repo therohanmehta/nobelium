@@ -1,0 +1,50 @@
+.image{
+    
+    bottom: 36px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: relative;
+    left: 36%;
+}
+.registrationForm{
+    border: 1px solid rgb(75, 71, 71);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    position: relative;
+    left: 30vw;
+    top: 10vh;
+    height: 40vh;
+
+}
+.inpName{
+    height: 26px;
+    text-align: center;
+}
+.username{
+    height: 26px;
+    text-align: center;
+}
+.password{
+    height: 26px;
+    text-align: center;
+
+}
+.donthaveacc{
+    background-color: red;
+    font-size: small;
+    width: 90px;
+}
+.registerBtn{
+
+    width: 81px;
+    background-color: #cef0f0;
+    position: relative;
+    left: 12vw;
+    height: 33px;
+    border: none;
+    border-radius: 5px;
+    top: 1rem;
+}

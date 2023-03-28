@@ -1,0 +1,49 @@
+.image{
+    
+    bottom: 36px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: relative;
+    left: 36%;
+}
+.loginForm{
+    border: 1px solid rgb(75, 71, 71);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    position: relative;
+    left: 30vw;
+    top: 10vh;
+    
+
+}
+.username{
+    height: 26px;
+    text-align: center;
+}
+.password{
+    height: 26px;
+    text-align: center;
+
+}
+.donthaveacc{
+    background-color: #a17ee04d;
+    font-size: small;
+    width: 130px;
+    border: none;
+    position: relative;
+    top: 15px;
+    left: 10px;
+}
+.loginbtn{
+    width: 81px;
+    background-color: #cef0f0;
+    position: relative;
+    bottom: 19px;
+    left: 12vw;
+    height: 33px;
+    border: none;
+    border-radius: 5px;
+}
